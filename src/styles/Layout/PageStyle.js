@@ -6,10 +6,9 @@ const FlexConfig = styled.div`
     flex-direction: column;
 `
 
-export const GreetingWrapper = styled(FlexConfig)`
+export const ViewWrapper = styled(FlexConfig)`
     height: 85vh;
     justify-content: center;
-    margin-left: 5rem;
     /* background-color: orange; */
     width: 50vw;
 `
@@ -17,12 +16,13 @@ export const MinorGreeting = styled.div`
     align-self: flex-start;
     font-size: calc(1.5rem + 2.5vw);
 `
-export const Name = styled(FlexConfig)`
+export const InfoWrapper = styled(FlexConfig)`
     white-space: nowrap;
     margin-top: 2rem;
     font-size: calc(.1rem + 8vw);
 `
-export const HeroWrapper = styled.div`
+export const MainWrapper = styled.div`
+    padding: 0 10rem;
 `
 export const Description = styled(FlexConfig)`
     margin-bottom: calc(1rem + 1.8vw);
@@ -31,6 +31,7 @@ export const Description = styled(FlexConfig)`
     font-style: normal;
     font-size: calc(1rem + 1.2vw);
     align-self: center;
+    margin-top: -1rem;
 `
 export const ProfessionWrapper = styled.div`
     display: flex;
@@ -54,7 +55,9 @@ export const Designer = styled(Developer)`
 export const ReactGuy = styled(Developer)`
 `
 export const P = styled.div`
+    text-align:center;
+    padding-top:1rem;
 `
-export const PName = styled.div`
+export const MainText = styled.div`
     height: 10vw;
 `

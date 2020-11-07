@@ -1,6 +1,7 @@
 export const Colors = {
     color: {
         heroBkgrd: '#9F9EEB',
+        reactBkgrd: '#5BAEDD',
         fontPrimary: '#F2F2F2',
         heroBoxesColor: '#F2F2F2',
         fontBoxHeroColor: '#9F9EEB'

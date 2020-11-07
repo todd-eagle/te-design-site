@@ -4,7 +4,7 @@ import {Colors} from '../Base/Colors'
 
 export const MainHeader = styled.header`
     position: relative;
-    padding: 1rem 5rem;
+    padding: 1rem 10rem;
     align-self: start;
     display: flex;
     height: 8rem;

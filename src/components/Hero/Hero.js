@@ -1,28 +1,28 @@
 import React from 'react'
-import {GreetingWrapper, MinorGreeting, Name, Description, ProfessionWrapper,
-        Right, Left, Developer, Designer, ReactGuy, P, PName, HeroWrapper} from '../../styles/Layout/Hero'
+import {ViewWrapper, MinorGreeting, InfoWrapper, Description, ProfessionWrapper,
+        Right, Left, Developer, Designer, ReactGuy, P, MainText, MainWrapper} from '../../styles/Layout/PageStyle'
 
 const Hero = () => {
 
     return(
-            <HeroWrapper>
-                <GreetingWrapper>
+            <MainWrapper>
+                <ViewWrapper>
                     <MinorGreeting>I'm</MinorGreeting>
-                    <Name>
-                        <PName>Todd Eagle.</PName>
+                    <InfoWrapper>
+                        <MainText>Todd Eagle.</MainText>
                         <Description><P>I live for interactice web design.</P></Description>
                         <ProfessionWrapper>
                         <Right>
-                            <Developer>Web Developer.</Developer>
+                            <Developer><P>Web Developer.</P></Developer>
                             <Designer><P>Web Designer.</P></Designer>
                         </Right>
                         <Left>
                             <ReactGuy><P>React Enthusiast.</P></ReactGuy>
                         </Left>
-                    </ProfessionWrapper>
-                </Name>
-            </GreetingWrapper>
-            </HeroWrapper>    
+                        </ProfessionWrapper>
+                    </InfoWrapper>
+                </ViewWrapper>
+            </MainWrapper>    
     )
 }
 

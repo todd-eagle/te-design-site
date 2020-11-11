@@ -1,10 +1,18 @@
-import React from 'react'
+import React, {useEffect} from 'react'
+import {connect} from 'react-redux'
+import {setBackground} from '../../redux/reducers/StylesReducer'
 import {ViewWrapper, MinorGreeting, InfoWrapper, Description, ProfessionWrapper,
         Right, Left, Developer, Designer, ReactGuy, P, MainText, MainWrapper} from '../../styles/Layout/PageStyle'
 
-const Hero = () => {
+const Hero = (props) => {
+
+    useEffect(() =>{
+        props.setBackground('orange')
+    },[])
+   
 
     return(
+        <>
             <MainWrapper>
                 <ViewWrapper>
                     <MinorGreeting>I'm</MinorGreeting>
@@ -22,8 +30,9 @@ const Hero = () => {
                         </ProfessionWrapper>
                     </InfoWrapper>
                 </ViewWrapper>
-            </MainWrapper>    
+            </MainWrapper>  
+        </>      
     )
 }
-
-export default Hero
+const mapStateToProps =  reduxState => reduxState
+export default connect(mapStateToProps, {setBackground})(Hero)

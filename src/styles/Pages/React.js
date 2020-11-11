@@ -1,5 +1,4 @@
 import styled from 'styled-components'
-import {Colors} from '../Base/Colors'
 import {Description} from '../Layout/PageStyle'
 
 

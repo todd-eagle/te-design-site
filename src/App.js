@@ -1,13 +1,15 @@
 import logo from './logo.svg';
 import './App.css';
+import {connect} from 'react-redux'
 import Header from './components/Header/Header'
 import Landing from './components/Landing/Landing'
 import {GlobalResetStyle, Wrapper} from './styles/Base/Base'
 
-function App() {
+function App(props) {
+
   return (
     <>
-      <GlobalResetStyle /> 
+      <GlobalResetStyle color={props.styles.background}/> 
       <Wrapper>
         <Header />
         <Landing />
@@ -15,5 +17,5 @@ function App() {
     </>
   )
 }
-
-export default App;
+const mapStateToProps =  reduxState => reduxState
+export default connect(mapStateToProps,)(App)

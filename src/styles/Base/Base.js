@@ -1,6 +1,7 @@
 import styled, {createGlobalStyle} from 'styled-components'
 import {Colors} from '../Base/Colors'
 
+
 export const GlobalResetStyle = createGlobalStyle`
 *,
 *::before,
@@ -20,7 +21,7 @@ body {
     font-style: normal;
     line-height: 1.3;
     color: ${Colors.color.fontPrimary};
-    background-color: ${Colors.color.heroBkgrd};
+    background-color: ${props=>props.color};
 }
 `
 export const Wrapper = styled.div`

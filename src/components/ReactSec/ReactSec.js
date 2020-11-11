@@ -1,8 +1,15 @@
-import React from 'react'
+import React, {useEffect} from 'react'
+import {connect} from 'react-redux'
+import {setBackground} from '../../redux/reducers/StylesReducer'
 import {ViewWrapper, InfoWrapper, Description, 
     P, MainText, MainWrapper} from '../../styles/Layout/PageStyle'
 
-const ReactSec = () => {
+const ReactSec = (props) => {
+
+    useEffect(() =>{
+        props.setBackground('green')
+    },[])
+
     return(
         <>
         <MainWrapper>
@@ -22,4 +29,5 @@ const ReactSec = () => {
    
 }
 
-export default ReactSec
+const mapStateToProps =  reduxState => reduxState
+export default connect(mapStateToProps, {setBackground})(ReactSec)
